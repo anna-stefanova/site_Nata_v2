@@ -1,0 +1,40 @@
+.footer {
+  background-color: $black;
+  color: $grey;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 9.3rem;
+  }
+
+  &__social {
+    &__item {
+      display: inline-block;
+      text-decoration: none;
+    }
+    &-icon {
+      border-radius: .3rem;
+      background-color: $grey;
+      width: 5.5rem;
+      height: 5.5rem;
+      padding: .9rem;
+      fill: $black;
+      transition: background-color .2s linear;
+
+      &:hover {
+        background-color: lighten($grey, 15%);
+      }
+    }
+  }
+
+  &__info {
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 2.3rem 0;
+    a {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.news {
+  font-size: 4.2rem;
+  font-family: "PT Sans", sans-serif;
+
+  &__inner {
+    margin-bottom: 6.5rem;
+
+    a {
+      font-weight: 700;
+      color: #00aeef;
+
+      &:hover {
+        color: darken(#00aeef, 10%);
+      }
+    }
+  }
+
+  &__item {
+    margin-bottom: 2rem;
+  }
+
+  &__date {
+    font-style: italic;
+    font-size: 3.5rem;
+    color: #999999;
+
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+
+    &::before {
+      content: '•';
+      padding-right: .5rem;
+    }
+
+  }
+
+  &__description{
+
+    &-link {
+      font-style: italic;
+    }
+
+  }
+
+
+}
+

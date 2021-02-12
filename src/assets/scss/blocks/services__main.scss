@@ -1,0 +1,65 @@
+.services__main {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 17.5rem;
+    margin-bottom: 4.5rem;
+  }
+
+  &__item {
+    width: 50%;
+    display: flex;
+    margin-bottom: 10.5rem;
+  }
+
+  &__image {
+    width: 16.6rem;
+    height: 16.6rem;
+    background-color: $sky_blue;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 3.8rem;
+
+
+    img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+    }
+
+
+  }
+  &__content {
+    width: 58%;
+  }
+
+  &__title {
+    font-size: 4.8rem;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
+
+  &__description {
+    font-size: 3rem;
+  }
+
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    color: $blue;
+    margin-top: .5rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__note {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 6.2rem;
+  }
+}

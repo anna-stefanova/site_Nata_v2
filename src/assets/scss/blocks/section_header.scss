@@ -1,0 +1,21 @@
+.section__title {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 6rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 5.5rem;
+  padding-bottom: 8rem;
+
+  &.blue {
+    color: $blue;
+  }
+}
+
+.add_figure {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+

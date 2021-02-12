@@ -1,0 +1,33 @@
+.services__main__contact {
+  background-color: $sky-blue;
+
+  &-form {
+    &__inner {
+      display: flex;
+      padding-top: 4.7rem;
+    }
+
+    &__item {
+      width: 50%;
+
+      .contact__name, .contact__theme, .contact__email {
+        width: 82%;
+        border: .3rem #6dcff6 solid;
+        padding: 1.65rem;
+        margin: 2.3rem 0 2.3rem 10.8rem;
+      }
+
+      .contact__msg {
+        width: 81%;
+        border: .3rem #6dcff6 solid;
+        padding: 1.65rem;
+        margin: 2rem 0 4rem 2.4rem;
+      }
+
+      .contact__submit {
+        margin-left: 2.4rem;
+        padding: 1.5rem 5.75rem;
+      }
+    }
+  }
+}

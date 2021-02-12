@@ -1,0 +1,63 @@
+.intro {
+  height: 31.6rem;
+  width: 100%;
+
+  &.page-portfolio {
+    background: url("/assets/images/portfolio-bg.jpg") no-repeat #323960;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+
+  &.page-services {
+    background: url("/assets/images/services-bg.jpg") no-repeat #323960;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+
+  &.page-contacts {
+    background: url("/assets/images/contacts-bg.jpg") no-repeat #323960;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    padding: 12.4rem 0;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: $primary;
+    font-size: 6.8rem;
+    font-weight: 700;
+  }
+
+  &__breadcrumbs {
+    list-style: none;
+
+    li {
+      display: inline;
+      font-size: 2.8rem;
+      color: $blue;
+
+      a {
+        color: $primary;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    li+li:before {
+      color: $primary;
+      content: "/\00a0";
+    }
+  }
+}
