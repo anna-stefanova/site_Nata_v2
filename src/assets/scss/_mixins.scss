@@ -1,0 +1,21 @@
+@mixin button-reset {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@mixin breakpoint($br) {
+  @media (max-width: $br) {
+    @content;
+  }
+}
+
+@mixin minBreakpoint($br) {
+  @media (min-width: $br) {
+    @content;
+  }
+}
+

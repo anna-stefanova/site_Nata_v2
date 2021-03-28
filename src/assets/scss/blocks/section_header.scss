@@ -6,6 +6,21 @@
   text-align: center;
   padding-top: 5.5rem;
   padding-bottom: 8rem;
+  @include breakpoint($extra-large-bp) {
+    font-size: 5.5rem;
+    padding-bottom: 7rem;
+  }
+  @include breakpoint($medium-bp) {
+    font-size: 5.2rem;
+  }
+  @include breakpoint($small-bp) {
+    font-size: 5rem;
+    padding-bottom: 6rem;
+  }
+  @include breakpoint($smallest-bp) {
+    font-size: 4.6rem;
+    padding-bottom: 5rem;
+  }
 
   &.blue {
     color: $blue;

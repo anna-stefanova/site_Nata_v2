@@ -1,6 +1,18 @@
 .news {
   font-size: 4.2rem;
   font-family: "PT Sans", sans-serif;
+  @include breakpoint($extra-large-bp) {
+    font-size: 3.7rem;
+  }
+  @include breakpoint($medium-bp) {
+    font-size: 3.4rem;
+  }
+  @include breakpoint($small-bp) {
+    font-size: 3.1rem;
+  }
+  @include breakpoint($smallest-bp) {
+    font-size: 2.7rem;
+  }
 
   &__inner {
     margin-bottom: 6.5rem;
@@ -23,8 +35,20 @@
     font-style: italic;
     font-size: 3.5rem;
     color: #999999;
-
     margin-bottom: 1rem;
+    @include breakpoint($extra-large-bp) {
+      font-size: 3rem;
+    }
+    @include breakpoint($medium-bp) {
+      font-size: 2.7rem;
+    }
+    @include breakpoint($small-bp) {
+      font-size: 2.5rem;
+    }
+    @include breakpoint($smallest-bp) {
+      font-size: 2.1rem;
+    }
+
   }
 
   &__title {
@@ -41,6 +65,9 @@
 
     &-link {
       font-style: italic;
+      @include breakpoint($extra-large-bp) {
+        display: block;
+      }
     }
 
   }

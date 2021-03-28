@@ -1,47 +1,204 @@
-
-
 .slider {
-  background: url("/assets/images/slider-bg.jpg") no-repeat $blue;
-  background-size: cover;
+  position: relative;
+  overflow: hidden;
   width: 100%;
-  height: 65.2rem;
+  height: 62.8rem;
+  @include breakpoint($small-bp) {
+    height: calc(100vh - 17.5rem);
+  }
+  @include breakpoint($smallest-bp) {
+    height: calc(100vh - 13.5rem);
+  }
+
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  &__items {
+    display: flex;
+    transition: transform 1s ease;
+    height: 100%;
+  }
+
+  &__item {
+    flex: 0 0 100%;
+    position: relative;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      @include breakpoint($small-bp) {
+        filter: brightness(40%);
+      }
+
+    }
+
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    max-width: 65rem;
+    text-align: right;
+    color: $primary;
+    @include breakpoint($extra-large-bp) {
+      max-width: 55rem;
+    }
+    @include breakpoint($medium-bp) {
+      max-width: 45rem;
+      text-align: left;
+      padding-left: 1.5rem;
+    }
+    @include breakpoint($extra-small-bp) {
+      padding-right: 1.5rem;
+    }
+
+    &-title {
+      font-size: 5.3rem;
+      padding-top: 13rem;
+      @include breakpoint($medium-bp) {
+        font-size: 4.7rem;
+      }
+      @include breakpoint($smallest-bp) {
+        font-size: 4rem;
+        padding-top: 8.5rem;
+      }
+    }
+
+    &-description {
+      font-size: 4.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1.2;
+      margin: 1.5rem 0 3rem;
+      @include breakpoint($extra-large-bp) {
+        font-size: 4.2rem;
+      }
+      @include breakpoint($medium-bp) {
+        font-size: 3.5rem;
+        margin-bottom: 0;
+      }
+      @include breakpoint($smallest-bp) {
+        font-size: 3rem;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        float: right;
+        width: 21rem;
+        height: 0.1rem;
+        background-color: $black;
+        margin-top: 2.6rem;
+
+        @include breakpoint($medium-bp) {
+          float: none;
+        }
+      }
+    }
+    &-mail {
+
+      a {
+        font-size: 2.7rem;
+        color: $primary;
+        text-decoration: none;
+        text-align: right;
+      }
+    }
+  }
 }
 
-.slider__inner {
-  width: 50%;
-  text-align: right;
-  color: $primary;
 
-  &-title {
-    font-size: 5.3rem;
-    padding-top: 13rem;
+
+/* стили для кнопок "вперед" и "назад" */
+.slider__control {
+  position: absolute;
+  top: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  opacity: 0.5;
+  height: 50px;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  @include button-reset;
+
+
+  &_show {
+    display: flex;
   }
-  &-description {
-    font-size: 4.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: 1.2;
-    margin: 1.5rem 0 3rem;
 
-    &:after {
-      content: '';
-      display: block;
-      float: right;
-      width: 21rem;
-      height: 0.1rem;
-      background-color: $black;
-      margin-top: 2.6rem;
+  &:hover, &:focus {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    opacity: 0.9;
+  }
+
+  &_prev {
+    left: 7rem;
+  }
+
+  &_next {
+    right: 7rem;
+  }
+
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 57px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+  }
+
+  &_prev:before {
+    background-image: url('/assets/images/icons/arrow-left.svg');
+  }
+
+  &_next:before {
+    background-image: url('/assets/images/icons/arrow-right.svg');
+  }
+
+
+}
+
+
+/* стили для индикаторов */
+.slider__indicators {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  left: 0;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  margin: 0 15%;
+  list-style: none;
+
+  li {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 4px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-clip: padding-box;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+
+    &.active {
+      background-color: #fff;
     }
   }
-  &-mail {
-
-    a {
-      font-size: 2.7rem;
-      color: $primary;
-      text-decoration: none;
-      text-align: right;
-    }
-
-  }
-
 }

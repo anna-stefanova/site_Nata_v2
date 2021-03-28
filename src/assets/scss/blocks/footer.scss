@@ -11,8 +11,12 @@
 
   &__social {
     &__item {
-      display: inline-block;
+      display: block;
+      float: left;
       text-decoration: none;
+      margin-left: 10px;
+      transition: all .6s ease;
+
     }
     &-icon {
       border-radius: .3rem;
@@ -21,9 +25,10 @@
       height: 5.5rem;
       padding: .9rem;
       fill: $black;
-      transition: background-color .2s linear;
+      transition: background-color, margin-top .2s linear;
 
       &:hover {
+        margin-top: -10px;
         background-color: lighten($grey, 15%);
       }
     }

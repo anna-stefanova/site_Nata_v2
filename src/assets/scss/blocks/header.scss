@@ -9,29 +9,76 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 225px;
-}
-
-.menu__list {
-  display: flex;
-  margin-top: 25px;
-
-  &-item {
-    display: inline-block;
-    padding-bottom: 15px;
-    border-bottom: 5px solid transparent;
-    transition: border-color .2s linear;
-
-    &:hover {
-      box-sizing: border-box;
-      border-color: $secondary;
-    }
+  height: 22.5rem;
+  @include breakpoint($extra-large-bp) {
+    height: 17.5rem;
+  }
+  @include breakpoint($smallest-bp) {
+    height: 13.5rem;
   }
 }
 
+.logo {
+  display: inline-block;
+  max-width: 300px;
+  @include breakpoint($extra-small-bp) {
+    margin-right: 70px;
+  }
+
+}
+
+.logo__img {
+  width: 100%;
+}
+
+.menu {
+  @include breakpoint($medium-bp) {
+    display: none;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    top: 13.5rem;
+    z-index: 1;
+    background-color: $black;
+  }
+}
+
+.menu__list {
+  margin-top: 25px;
+}
+
+.menu__list-item {
+  display: inline-block;
+  padding-bottom: 15px;
+  border-bottom: 5px solid transparent;
+  transition: border-color .2s linear;
+  @include breakpoint($medium-bp) {
+    display: block;
+    text-align: center;
+  }
+
+  &:hover {
+    box-sizing: border-box;
+    border-color: $secondary;
+    @include breakpoint($medium-bp) {
+      border-color: transparent;
+
+    }
+
+  }
+}
 
 .menu__list-item + .menu__list-item {
   margin-left: 6rem;
+  @include breakpoint($huge-bp) {
+    margin-left: 4rem;
+  }
+  @include breakpoint($large-bp) {
+    margin-left: 3rem;
+  }
+  @include breakpoint($medium-bp) {
+    margin-left: 0;
+  }
 }
 
 .menu__list-link {
@@ -41,6 +88,18 @@
   font-size: 28px;
   font-weight: 400;
   text-transform: uppercase;
+
+  @include breakpoint($extra-large-bp) {
+    font-size: 22px;
+    display: inline-block;
+    width: 100%;
+  }
+
+  @include breakpoint($medium-bp) {
+    &:focus {
+      color: $secondary;
+    }
+  }
 }
 
 

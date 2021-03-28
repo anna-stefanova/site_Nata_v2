@@ -1,0 +1,45 @@
+.about__main {
+  background-color: #f2f1f1;
+  padding-top: 6.8rem;
+
+  &__sidebar {
+    &__image {
+      background-color: $primary;
+      height: 33.3rem;
+      width: 33.3rem;
+      border: .6rem solid $primary;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-left: 1.7rem;
+      margin-right: 15.5rem;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__content {
+    min-width: 65%;
+  }
+
+  &__header {
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
+
+  &__description {
+    p {
+      font-size: 3.4rem;
+      line-height: 1.3;
+    }
+  }
+
+}
+

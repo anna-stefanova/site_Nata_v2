@@ -74,8 +74,8 @@
   }
 
   &__map {
-    width: 72.4rem;
-    height: 42.4rem;
+    max-width: 72.4rem;
+    max-height: 42.4rem;
     border: .3rem $blue solid;
 
     &-img {
